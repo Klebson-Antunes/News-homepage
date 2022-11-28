@@ -1,0 +1,135 @@
+#header {
+    width: 69%;
+    height: 70px;
+    max-width: 1500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0 auto;
+}
+
+#logo {
+    width: 20%;
+}
+
+#nav {
+    width: 80%;
+    padding-right: 0.7rem;
+    height: 50px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#btn-monile {
+    display: none;
+}
+
+#menu {
+    position: static;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 1rem;
+    visibility: visible;
+    padding-right: 1rem;
+}
+#menu li {
+    width: 90px;
+    height: 30px;
+}
+#menu li a {
+    color: var(--Dark-grayish-blue);
+    font-weight: 400;
+}
+
+#menu li a:hover {
+    color: var(--soft-red);
+    text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 912px) {
+  
+#header {
+    width: 100%;
+}
+
+#logo {
+    padding-left: 0.7rem;
+    width: 30%;
+    height: 50px;
+}
+
+#menu {
+    width: 70%;
+    display: block;
+    position: absolute;
+    z-index: 100;
+    line-height: 5px;
+    top: 70px;
+    right: 0;
+    height: 0;
+    padding: 1rem;
+    visibility: hidden;
+    overflow-y: hidden;
+    background-color: var(--off-white);
+    
+}
+
+#nav.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
+}
+
+#nav.active #menu li {
+    margin-bottom: 1rem;
+}
+
+#btn-mobile {
+    display: flex;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: .5rem;
+}
+
+#hamburguer {
+    color: var(--Very-dark-blue);
+    border-top: 3px solid;
+    width: 20px;
+}
+
+/*usar os pseudo elementos :: before e after
+    para criar mais 2 linha para criar o hamburguer*/
+#hamburguer::after,
+#hamburguer::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color: currentColor;
+    margin-top: 5px;
+    transition: .4s;
+    position: relative;
+}
+
+/*anima botao quando clicar*/
+#nav.active #hamburguer {
+    border-top-color: transparent;
+}
+
+#nav.active #hamburguer::before {
+    transform: rotate(135deg);
+}
+
+#nav.active #hamburguer::after {
+    transform: rotate(-135deg);
+    top: -8px;
+}
+
+}

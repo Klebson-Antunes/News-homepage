@@ -1,0 +1,161 @@
+main {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: .8rem;
+    padding-top: .7rem;
+}
+
+#capa {
+    width: 100%;
+    height: auto;
+}
+
+#imagens {
+    width: 100%;
+}
+
+#imagens #img-mobile {
+    width: 100%;
+}
+
+#imagens #img-desktop {
+    display: none;
+}
+
+#futuro-web {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#futuro-web h2{
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+#informacoes {
+    width: 100%;
+}
+
+#informacoes #btn {
+    background: var(--soft-red);
+    color: var(--off-white);
+    padding: 0.7rem;
+    width: 115px;
+    border-radius: 0.3rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#informacoes #btn:hover {
+    color: var(--soft-red);
+    background: none;
+    outline: 1px solid var(--soft-red);
+}
+
+#novidades {
+    background: var(--Very-dark-blue);
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .5rem;
+}
+
+#novidades h2 {
+    color: var(--soft-orange);
+}
+
+#novidades div {
+    padding: 1rem 0;
+    height: auto;
+    border-bottom: 1px solid var(--Dark-grayish-blue);
+}
+#novidades div:nth-child(4){
+    border-bottom: none;
+}
+
+#novidades div h3 {
+    color: var(--off-white);
+    margin-bottom: 5px;
+}
+
+#container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+.box {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+.box img {
+    width: 70px;
+}
+.box div {
+    width: 60%;
+}
+.box div h5 {
+    color: var(--Grayish-blue);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.box div h6 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+@media only screen and (min-width: 912px) {
+    main {
+        width: 68%;
+        height: 100vh;
+        grid-template-columns: 65% 30%;
+        column-gap: 1rem;
+    }
+
+    #imagens #img-mobile {
+        display: none;
+    }
+
+    #imagens #img-desktop {
+        display: block;
+        width: 100%;
+    }
+
+    #futuro-web {
+        flex-direction: row;
+        margin-top: 1rem;
+    }
+
+    #novidades {
+        padding: 1rem;
+        height: 380px;
+        gap: 0;
+    }
+
+    #novidades h2 {
+        font-size: 2rem;
+    }
+
+    #novidades div h3 {
+        font-size: .8rem;
+    }
+
+    #container {
+        grid-column: 1 / 4;
+        width: 100%;
+        height: 120px;
+        flex-direction: row;
+        gap: 0;
+    }
+}
