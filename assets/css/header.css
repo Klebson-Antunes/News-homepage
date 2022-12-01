@@ -87,7 +87,9 @@
 #nav.active #menu li {
     margin-bottom: 1rem;
 }
-
+#nav.active main{
+    opcity: 0.6;
+ }    
 #btn-mobile {
     display: flex;
     padding: .5rem 1rem;
